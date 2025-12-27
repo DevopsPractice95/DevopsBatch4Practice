@@ -1,4 +1,23 @@
 ---
--name: install nginx
--host: local
-- lable:
+- name: Install and start Nginx
+  hosts: webservers
+  become: true  # This enables privilege escalation (sudo) for tasks
+  tasks:
+    - name: Update apt cache (optional, but good practice)
+      ansible.builtin.apt:
+        update_cache: yes
+      changed_when: false # This task only updates cache and doesn't change system state
+
+    - name: Install Nginx package
+      ansible.builtin.apt:
+        name: nginx
+        state: latest
+      notify:
+        - Start Nginx service
+
+  handlers:
+    - name: Start Nginx service
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: yes
