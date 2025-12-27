@@ -1,0 +1,3 @@
+ansible-playbook -i inventory.ini nginx-install.yml --ask-become-pass
+The --ask-become-pass flag prompts for the sudo password for the remote hosts. 
+After successful execution, Nginx will be installed and running on the target servers. You can verify the installation by navigating to the server's IP address in a web
