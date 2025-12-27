@@ -1,2 +1,5 @@
 Hello Good morning
 i am punit parida , today i am learning git and github...
+
+Day -2
+Today we ll cover Gitbranch, merge, rebase, merge conflict and some real time use cases.
