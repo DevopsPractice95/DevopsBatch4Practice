@@ -1,0 +1,8 @@
+hosts: webservers: Specifies that this playbook will run on the hosts listed under the [webservers] group in your inventory file.
+become: true: Tells Ansible to use privilege escalation (like sudo) for all tasks in the play, which is necessary to install software and manage system services.
+ansible.builtin.apt: This module manages packages using the Advanced Package Tool (APT) system, commonly found in Debian/Ubuntu.
+name: nginx: Specifies the package name.
+state: latest: Ensures the package is installed and at the newest version available.
+notify: [handler_name]: Triggers a "handler" if a change is made by the associated task. In this case, the Start Nginx service handler is notified only if Nginx is actually installed or updated.
+handlers: Handlers are similar to tasks but only run when explicitly notified. This ensures Nginx starts after the installation is complete.
+ansible.builtin.service: Manages system services. 
