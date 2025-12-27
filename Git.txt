@@ -3,3 +3,23 @@ i am punit parida , today i am learning git and github...
 
 Day -2
 Today we ll cover Gitbranch, merge, rebase, merge conflict and some real time use cases.
+
+Day-1 doubt
+-------------
+vivek ra doubt thila kemiti pull hauchi
+
+Total around 7 command real time re use karuche
+
+git status
+git add .
+git commit -m ""
+git push
+
+
+today command
+--------------
+git branch
+git checkout
+git switch
+git merge
+git rebase
